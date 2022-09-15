@@ -1,0 +1,12 @@
+.chatbots {
+  background: $light-gray;
+  padding: 85px 0;
+
+  .dots {
+    margin-top: 65px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 60px 0 27px;
+  }
+}

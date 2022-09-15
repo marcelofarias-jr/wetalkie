@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+  padding: 0 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+.columns {
+  display: block;
+  margin: 0;
+
+  &--acenter {
+    align-items: center;
+  }
+
+  .column {
+    width: 100%;
+
+    &--auto {
+      width: auto;
+    }
+
+    &--100 {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 962px;
+    padding: 0 30px;
+  }
+
+  .columns {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+
+    &--970 {
+      width: 970px;
+    }
+  }
+}

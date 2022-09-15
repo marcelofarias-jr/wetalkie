@@ -1,0 +1,105 @@
+.invoice {
+  padding: 120px 0;
+
+  .section__title {
+    @media (min-width: 992px) {
+      margin-top: -112px;
+    }
+  }
+
+  .section__content {
+    margin-bottom: 30px;
+
+    @media (min-width: 992px) {
+      min-width: 458px;
+      max-width: 458px;
+      margin-bottom: 0px;
+    }
+  }
+
+  .columns {
+    align-items: center;
+  }
+
+  &__phones {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 98px;
+  }
+
+  &__cards {
+    margin: 0 -15px 112px;
+    display: flex;
+
+    .card {
+      padding: 30px 15px;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
+      background: $white;
+      margin: 0 15px;
+      min-height: 267px;
+      min-width: 247px;
+      max-width: 267px;
+      text-align: center;
+      position: relative;
+      
+      &__title {
+        color: $pink;
+        margin-bottom: 15px;
+        font-family: 'Quicksand';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 19px;
+      }
+
+      &__content {
+        color: $blue;
+        font-family: 'Quicksand';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 19px;
+      }
+
+      &::after {
+        content: url('data:image/svg+xml,<svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.22523 8.5C1.04655 8.5 0.878378 8.41467 0.720721 8.244C0.573574 8.06267 0.5 7.88133 0.5 7.7C0.5 7.58267 0.526276 7.48133 0.578829 7.396C0.641892 7.31067 0.736486 7.23067 0.862613 7.156L5.38609 4.55154L0.846847 1.86C0.731231 1.796 0.647147 1.716 0.594595 1.62C0.552553 1.524 0.531532 1.41733 0.531532 1.3C0.531532 1.08667 0.605105 0.9 0.752252 0.74C0.899399 0.58 1.0518 0.5 1.20946 0.5C1.30405 0.5 1.4039 0.526667 1.50901 0.58C1.62462 0.633333 1.74024 0.697333 1.85586 0.771999L7.12162 3.86C7.24775 3.93467 7.34234 4.03067 7.40541 4.148C7.46847 4.26533 7.5 4.39867 7.5 4.548C7.5 4.68667 7.46847 4.81467 7.40541 4.932C7.35285 5.04933 7.26351 5.14533 7.13739 5.22L1.84009 8.26C1.72447 8.324 1.61411 8.38267 1.50901 8.436C1.41441 8.47867 1.31982 8.5 1.22523 8.5Z" fill="white"/></svg>');
+        position: absolute;
+        top: 32px;
+        left: -12.35px;
+        width: 27px;
+        height: 27px;
+        background: $blue;
+        color: $white;
+        border-radius: 50%;
+        padding-top: 4px;
+        box-sizing: border-box;
+        transition: transform 150ms ease-in-out;
+      }
+
+      &:hover {
+        &::after {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1199px) {
+    &__cards {
+      display: block;
+      margin: 0 -15px 60px;
+
+      .card {
+        max-width: initial;
+        min-width: initial;
+        min-height: auto;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 80px 0 50px;
+  }
+}

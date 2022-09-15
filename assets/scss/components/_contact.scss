@@ -1,0 +1,133 @@
+.contact-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  pointer-events: none;
+
+  &__body {
+    position: absolute;
+    right: 0;
+    background: $white;
+    z-index: 1;
+    height: auto;
+    overflow: auto;
+    padding: 80px 30px;
+    max-width: 640px;
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+
+    .content {
+      height: 100vh;
+      width: 620px;
+      padding-right: 30px;
+      padding-bottom: 15px;
+      overflow: auto;
+      position: relative;
+
+      @media (max-width: 992px) {
+        width: calc(100% + 30px);
+      }
+    }
+
+    .contact-form__title {
+      margin-bottom: 30px;
+      font-weight: 600;
+      font-size: 50px;
+      line-height: 62px;
+      color: $blue;
+    }
+
+    .contact-form__content {
+      max-width: 411px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: $dark-blue;
+      margin-bottom: 70px;
+    }
+
+    .contact-form__close {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+    }
+
+    .wetalkie-logo {
+      position: absolute;
+      bottom: 90px;
+      right: 0;
+      z-index: -1;
+    }
+  }
+
+  &__backdrop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  &.active {
+    pointer-events: initial;
+
+    .contact-form__body {
+      transform: translateX(0);
+    }
+
+    .contact-form__backdrop {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 678px) {
+    &__body {
+      min-width: initial;
+      width: 100%;
+
+      .wetalkie-logo {
+        right: initial;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+.contact-form__handler {
+  position: fixed;
+  right: -120px;
+  top: 50%;
+  transform: rotate(-90deg) translateY(-50%);
+  z-index: 2;
+  text-decoration: none;
+  color: $white;
+  background: #0058FF;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.15);
+  padding: 9px 54px;
+  transition: background 300ms ease-in-out, opacity 300ms ease-in-out;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 26px;
+  opacity: 0;
+
+  &:hover {
+    background: $dark-blue;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+}

@@ -1,0 +1,39 @@
+.reports {
+  margin-bottom: 120px;
+
+  &__image {
+    background: linear-gradient(to bottom,  $white 43%, $blue 43%);
+    padding-bottom: 75px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .section__title--center {
+    max-width: initial;
+    margin-bottom: 15px;
+  }
+
+  .section__content--center {
+    max-width: initial;
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: 992px) {
+    margin-bottom: 80px;
+
+    &__image {
+      background: $white;
+      padding-bottom: 0;
+    }
+
+    .section__content--center {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+  }
+}

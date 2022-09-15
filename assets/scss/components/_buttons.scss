@@ -1,0 +1,24 @@
+.button {
+  display: block;
+  border-radius: 16px;
+  border: 1px solid $dark-blue;
+  color: $dark-blue;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  transition: all 150ms ease-in-out;
+
+  &--pink {
+    background: $pink;
+    color: $white;
+    border: 1px solid $pink;
+
+    &:hover {
+      background: $blue;
+      border: 1px solid $blue;
+    }
+  }
+}
